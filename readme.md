@@ -1,61 +1,75 @@
 # Decentralized Escrow Application
 
-[Alchemy University](https://university.alchemy.com) Week 5 final exercise by Pranav
+Welcome to the Decentralized Escrow Application, a project developed as part of the [Alchemy University](https://university.alchemy.com) Week 5 final exercise. This application allows users to deploy and manage escrow smart contracts on the blockchain.
 
 ## Overview
 
-This DApp allows the user (deployer and arbiter) to deploy Escrow Smart Contracts by adding a beneficiary. Only the arbiter can approve the contract, and when this happens the beneficiary is allowed to withdraw the contract funds.
-The app has the contract code and test, the frontend React App, and a server that allows persistent data to be retrieved in the UI.
+This DApp enables the deployer and arbiter to create escrow smart contracts by specifying a beneficiary. Only the arbiter has the authority to approve the contract, allowing the beneficiary to withdraw the funds. The project includes:
 
-## Content
+- Smart contract code and tests
+- A React-based frontend application
+- A backend server for persistent data retrieval
 
-1. Frontend - [`/app`](./app/)
-2. Backend - [`/server`](./server/)
-3. Escrow contract - [`/contracts`](./contracts/Escrow.sol)
-4. Contract tests - [`/tests`](./test/)
+## Project Structure
 
-### Local Configuration
+1. **Frontend** - `/app`
+2. **Backend** - `/server`
+3. **Escrow Contract** - `/contracts/Escrow.sol`
+4. **Contract Tests** - `/tests`
 
--   Run `npm install` for hardhat dependencies
--   Run `cd app && npm install` for frontend dependencies
--   Run `cd server && npm install` for backend dependencies
+## Getting Started
 
-## Hardhat
+### Prerequisites
 
--   Configuration - [`hardhat.config.js`](./hardhat.config.js)
+Ensure you have the following installed:
 
--   Compile contracts (artifacts will go to [`/app/src/artifacts`](./app/src/artifacts/)):
-    ```Shell
-    # With hardhat
-    npx hardhat compile
-    # With npm scripts
-    npm run compile
-    ```
--   Test contracts:
-    ```Shell
-    # With hardhat
-    npx hardhat test
-    # With npm scripts
-    npm run test
-    ```
--   Start local node:
-    ```Shell
-    # With hardhat
-    npx hardhat node
-    # With npm scripts
-    npm run node
-    ```
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [Hardhat](https://hardhat.org/)
 
-## Frontend
+### Installation
 
--   Start development host `npm start`
-    -   At the root level it runs the [npm script `start`](./package.json) which runs `cd app && npm start`
-    -   You can `cd app` and run `npm start` as well
--   Go to `http://localhost:3000`
+1. **Clone the repository:**
 
-## Backend
+   git clone <repository-url>
+   cd DecentralizedEscrowApp
 
--   Start the express server `npm run server`
-    -   At the root level it runs the [npm script `server`](./package.json) which runs `cd app && npm run dev`
-    -   You can `cd server` and run `npm run dev` as well
--   The server's purpose is to provide persistent data to have easier access to the deployed contracts
+2. **Install dependencies:**
+   - For Hardhat: `npm install`
+   - For Frontend: `cd app && npm install`
+   - For Backend: `cd server && npm install`
+
+## Usage
+
+### Hardhat
+
+- **Compile Contracts:**
+  - With Hardhat: `npx hardhat compile`
+  - With npm scripts: `npm run compile`
+  - Artifacts will be generated in `/app/src/artifacts`.
+
+- **Test Contracts:**
+  - With Hardhat: `npx hardhat test`
+  - With npm scripts: `npm run test`
+
+- **Start Local Node:**
+  - With Hardhat: `npx hardhat node`
+  - With npm scripts: `npm run node`
+
+### Frontend
+
+- **Start Development Server:** `npm start`
+  - At the root level, it runs the npm script `start` which runs `cd app && npm start`.
+  - You can also `cd app` and run `npm start`.
+  - Access the application at `http://localhost:3000`.
+
+### Backend
+
+- **Start Express Server:** `npm run server`
+  - At the root level, it runs the npm script `server` which runs `cd server && npm run dev`.
+  - You can also `cd server` and run `npm run dev`.
+  - The server provides persistent data access for deployed contracts.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the LICENSE file for details.
