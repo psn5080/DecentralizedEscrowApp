@@ -70,6 +70,6 @@ Ensure you have the following installed:
   - You can also `cd server` and run `npm run dev`.
   - The server provides persistent data access for deployed contracts.
 
-## License
+## License 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the LICENSE file for details.
